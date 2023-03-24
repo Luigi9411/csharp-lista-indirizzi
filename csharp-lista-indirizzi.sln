@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33502.453
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "csharp-lista-indirizzi", "csharp-lista-indirizzi\csharp-lista-indirizzi.csproj", "{67726B07-FD41-44BB-BC55-AC805D3BFA57}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{67726B07-FD41-44BB-BC55-AC805D3BFA57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67726B07-FD41-44BB-BC55-AC805D3BFA57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67726B07-FD41-44BB-BC55-AC805D3BFA57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67726B07-FD41-44BB-BC55-AC805D3BFA57}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0B417C4A-3581-41B0-BCC8-6505F17C209B}
+	EndGlobalSection
+EndGlobal
