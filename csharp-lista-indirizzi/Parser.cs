@@ -11,7 +11,7 @@ namespace csharp_lista_indirizzi
     public static class Parser
     {
         public const string InputFile = "..\\..\\..\\input.csv";
-        public const string OutputFile = "output.csv";
+
         public static IEnumerable<Address> Read()
         {
             using var input = File.OpenText(InputFile);
@@ -19,29 +19,38 @@ namespace csharp_lista_indirizzi
 
             input.ReadLine();
 
+            Console.WriteLine("Start reading.");
+
             while (true)
             {
-                 string? line = input.ReadLine();
-                 if (line is null) return addresses;
+                string? line = input.ReadLine();
+                if (line is null)
+                {
+                    Console.WriteLine("Parsing complete.");
+                    return addresses;
+                }
 
                 var chunks = line.Split(',')!;
 
-                var name = chunks[0];
-                var surname = chunks[1];
-                var street = chunks[2];
-                var city = chunks[3];
-                var providence = chunks[4];
-                var zip = chunks[5];
+                if (chunks.Length is 6)
+                {
+                    var name = chunks[0];
+                    var surname = chunks[1];
+                    var street = chunks[2];
+                    var city = chunks[3];
+                    var province = chunks[4];
+                    var zip = chunks[5];
 
-                var address = new Address(name,surname,street, city, providence,zip);
-                addresses.Add(address);
+                    var address = new Address(name, surname, street, city, province, zip);
+                    addresses.Add(address);
+
+                    Console.WriteLine("Object successfully parsed.");
+                }
+                else
+                {
+                    Console.WriteLine("Invalid format, discarding object.");
+                }
             }
-
-        }
-
-        public static void Write(Address address)
-        {
-            using var output = File.CreateText("input.csv");
         }
     }
 }
